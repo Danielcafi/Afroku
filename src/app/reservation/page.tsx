@@ -51,7 +51,7 @@ export default function ReservationPage() {
                 Réservation Confirmée !
               </span>
               <h2 className="text-2xl font-black text-gray-900">
-                Félicitations pour votre réservation 🇧🇯
+                Félicitations pour votre réservation
               </h2>
               <p className="text-sm text-gray-600 max-w-md mx-auto">
                 Votre paiement Mobile Money de <strong>52 500 FCFA</strong> a été validé avec succès. Votre billet digital avec QR Code a été envoyé par SMS & Email.

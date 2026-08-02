@@ -303,7 +303,7 @@ export default function ExplorerPage() {
 
                   {/* Map Label */}
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-black text-gray-800 shadow-sm">
-                    🇧🇯 Bénin - 126 offres géolocalisées
+                    Bénin - 126 offres géolocalisées
                   </div>
 
                 </div>

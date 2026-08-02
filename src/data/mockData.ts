@@ -34,6 +34,34 @@ export interface Experience {
   coordinates: { lat: number; lng: number };
 }
 
+export interface ArtisanProduct {
+  id: string;
+  name: string;
+  artisanName: string;
+  location: string;
+  category: string;
+  price: number;
+  image: string;
+  rating: number;
+  inStock: boolean;
+  description: string;
+}
+
+export interface CulturalEvent {
+  id: string;
+  slug: string;
+  title: string;
+  organizer: string;
+  dates: string;
+  city: string;
+  venue: string;
+  category: string;
+  ticketPrice: number;
+  image: string;
+  description: string;
+  badge?: string;
+}
+
 export interface Guide {
   id: string;
   name: string;
@@ -135,27 +163,12 @@ export const EXPERIENCES: Experience[] = [
     image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1572953109213-3be62398eb95?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
     ],
-    description: "Surnommée la Venise africaine, la cité lacustre de Ganvié est unique au monde. Édifiée sur des pirogues par le peuple Tofinu au XVIIIe siècle pour échapper aux razzias de chasseurs d'esclaves, la ville compte aujourd'hui plus de 30 000 habitants vivant exclusivement sur l'eau.",
-    highlights: [
-      "Balade en pirogue à la découverte du plus grand village lacustre d'Afrique",
-      "Rencontre chaleureuse avec les populations locales et pêcheurs",
-      "Découverte du marché flottant et des techniques de pêche traditionnelles",
-      "Visite du marché d'artisanat flottant et dégustation de poisson frais"
-    ],
-    included: [
-      "Transport A/R en pirogue à moteur sécurisée avec gilets",
-      "Guide touristique certifié parlant français & anglais",
-      "Frais d'accès à la cité lacustre",
-      "Bouteille d'eau fraîche & collation locale"
-    ],
-    excluded: [
-      "Dépenses personnelles et souvenirs",
-      "Pourboires pour le piroguier"
-    ],
+    description: "Surnommée la Venise africaine, la cité lacustre de Ganvié est unique au monde.",
+    highlights: ["Balade en pirogue", "Marché flottant", "Dégustation de poisson frais"],
+    included: ["Pirogue sécurisée", "Guide certifié", "Eau fraîche"],
+    excluded: ["Dépenses personnelles"],
     coordinates: { lat: 6.4678, lng: 2.4217 }
   },
   {
@@ -165,7 +178,7 @@ export const EXPERIENCES: Experience[] = [
     category: "Histoire & Vaudou",
     guideName: "Marie Houeton",
     guideAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
-    guideTitle: "Historienne & Guide Ouidah",
+    guideTitle: "Historienne Ouidah",
     location: "Ouidah, Bénin",
     city: "Ouidah",
     duration: "6 heures",
@@ -176,81 +189,107 @@ export const EXPERIENCES: Experience[] = [
     price: 15000,
     badge: "Populaire",
     image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-    ],
-    description: "Explorez Ouidah, capitale spirituelle du Vaudou et haut lieu de mémoire de la traite négrière. Visitez le Temple des Pythons, le Fort Portugais et parcourez la Route des Esclaves jusqu'à la Porte du Non-Retour.",
-    highlights: [
-      "Visite guidée du Temple des Pythons sacrés",
-      "Parcours de la Route des Esclaves de 4 km jusqu'à la plage",
-      "Méditation à la Porte du Non-Retour",
-      "Découverte de la Forêt Sacrée de Kpassè"
-    ],
-    included: ["Guide historien dédié", "Entrées aux sites & musées", "Eau minérale"],
-    excluded: ["Repas du midi", "Transport vers Ouidah"],
+    gallery: ["https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80"],
+    description: "Explorez Ouidah, capitale spirituelle du Vaudou et lieu de mémoire.",
+    highlights: ["Temple des Pythons", "Route des Esclaves", "Porte du Non-Retour"],
+    included: ["Guide historien", "Entrées aux musées"],
+    excluded: ["Repas"],
     coordinates: { lat: 6.3631, lng: 2.0853 }
-  },
+  }
+];
+
+export const ARTISANAT_PRODUCTS: ArtisanProduct[] = [
   {
-    id: "exp-3",
-    slug: "safari-parc-pendjari",
-    title: "Safari au Parc de Pendjari",
-    category: "Nature & Aventure",
-    guideName: "Kora Randonnée",
-    guideAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-    guideTitle: "Guide Écologiste Pendjari",
-    location: "Parc de Pendjari, Bénin",
-    city: "Natitingou",
-    duration: "1 Journée",
-    groupSize: "2 - 6 personnes",
-    languages: ["Français", "Anglais", "Waama"],
-    rating: 4.9,
-    reviewsCount: 156,
-    price: 45000,
-    badge: "Incontournable",
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80"
-    ],
-    description: "Plongez au cœur de l'une des plus importantes réserves de faune sauvage d'Afrique de l'Ouest. Observez éléphants, lions de l'Afrique de l'Ouest, hippopotames, babouins et antilopes dans leur habitat naturel.",
-    highlights: [
-      "Safari 4x4 tôt le matin au lever du soleil",
-      "Observation des troupeaux d'éléphants aux points d'eau",
-      "Visite des cascades de Tanougou en fin de safari"
-    ],
-    included: ["Véhicule 4x4 ouvert de safari avec chauffeur", "Guide pisteur certifié", "Déjeuner pic-nique local"],
-    excluded: ["Taxe d'entrée du Parc", "Hébergement nuitée"],
-    coordinates: { lat: 11.2000, lng: 1.5000 }
-  },
-  {
-    id: "exp-4",
-    slug: "decouverte-palais-abomey",
-    title: "Découverte du Palais de Abomey",
-    category: "Histoire & Patrimoine",
-    guideName: "Bio Bioba",
-    guideAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
-    guideTitle: "Guide du Patrimoine UNESCO",
+    id: "art-1",
+    name: "Tam-Tam Djembé Sculpté Traditionnel",
+    artisanName: "Maître Artisan Kossi (Abomey)",
     location: "Abomey, Bénin",
-    city: "Abomey",
-    duration: "3 heures",
-    groupSize: "1 - 15 personnes",
-    languages: ["Français", "Fon"],
-    rating: 4.7,
-    reviewsCount: 110,
-    price: 10000,
-    image: "https://images.unsplash.com/photo-1572953109213-3be62398eb95?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1572953109213-3be62398eb95?auto=format&fit=crop&w=800&q=80"
-    ],
-    description: "Explorez les Palais Royaux d'Abomey, classés au patrimoine mondial de l'UNESCO. Découvrez la légende des 12 rois du Dahomey, les célèbres Amazones guerrières et les bas-reliefs historiques.",
-    highlights: [
-      "Visite des trônes et reliques royales en bronze et or",
-      "Découverte de l'histoire héroïque des Amazones Agodjié",
-      "Démonstration d'artisanat royal d'applique et tissage"
-    ],
-    included: ["Billet d'entrée au musée royal", "Guide conférencier"],
-    excluded: ["Autorisation photo spéciale"],
-    coordinates: { lat: 7.1829, lng: 1.9912 }
+    category: "Instruments Musique",
+    price: 35000,
+    image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=800&q=80",
+    rating: 4.9,
+    inStock: true,
+    description: "Djembé taillé à la main dans du bois d'acajou avec peau de chèvre naturelle. Son puissant et authentique."
+  },
+  {
+    id: "art-2",
+    name: "Masque Zangbéto Ceremoniel Vaudou",
+    artisanName: "Atelier Art & Tradition (Ouidah)",
+    location: "Ouidah, Bénin",
+    category: "Masques & Sculptures",
+    price: 45000,
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80",
+    rating: 5.0,
+    inStock: true,
+    description: "Pièce de collection en paille tressée et bois sacré représentant le gardien de la nuit Zangbéto."
+  },
+  {
+    id: "art-3",
+    name: "Tissu Tissé Kanvo (Bazin & Coton Roi)",
+    artisanName: "Coopérative des Tisseurs d'Abomey",
+    location: "Zou, Bénin",
+    category: "Tenues & Textiles",
+    price: 28000,
+    image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
+    rating: 4.8,
+    inStock: true,
+    description: "Étoffe traditionnelle Kanvo tissée à la main sur métier en bois. Idéal pour tenues d'apparat et cérémonies."
+  },
+  {
+    id: "art-4",
+    name: "Statuette Royale en Bronze du Dahomey",
+    artisanName: "Fonderie Royale de Kpodji",
+    location: "Abomey, Bénin",
+    category: "Sculptures & Bronze",
+    price: 55000,
+    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+    rating: 4.9,
+    inStock: true,
+    description: "Reproduction fidèle à la cire perdue d'une statuette de lion symbole du Roi Glèlè."
+  }
+];
+
+export const EVENTS: CulturalEvent[] = [
+  {
+    id: "evt-1",
+    slug: "vodun-days-2027",
+    title: "Vodun Days 2027 - Ouidah",
+    organizer: "Gouvernement du Bénin & Afroku",
+    dates: "09 - 10 Janvier 2027",
+    city: "Ouidah",
+    venue: "Plage de la Porte du Non-Retour & Cité Historique",
+    category: "Festival International & Culturel",
+    ticketPrice: 15000,
+    badge: "Incontournable Mondial",
+    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
+    description: "Le plus grand rassemblement mondial célébrant les arts, la mémoire et la spiritualité Vaudou. Concerts géants, cérémonies sacrées, danses Egungun et Zangbéto."
+  },
+  {
+    id: "evt-2",
+    slug: "welove-eya-festival",
+    title: "WeLoveEya Festival 2026",
+    organizer: "Eya Centre Culturel",
+    dates: "15 Novembre 2026",
+    city: "Cotonou",
+    venue: "Centre Culturel EYA, Cotonou",
+    category: "Musique & Concert Urban",
+    ticketPrice: 10000,
+    badge: "Populaire Jeunesse",
+    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    description: "Le grand festival afro-urbain à Cotonou réunissant les plus grands artistes béninois et internationaux pour une nuit d'ambiance inoubliable."
+  },
+  {
+    id: "evt-3",
+    slug: "fitheb-2026",
+    title: "FITHEB - Festival Int. du Théâtre du Bénin",
+    organizer: "Ministère de la Culture",
+    dates: "01 - 05 Décembre 2026",
+    city: "Cotonou & Porto-Novo",
+    venue: "Le Palais des Congrès de Cotonou",
+    category: "Théâtre & Arts de la Scène",
+    ticketPrice: 5000,
+    image: "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=1200&q=80",
+    description: "Rencontre majeure des troupes théâtrales d'Afrique et du monde entier avec spectacles de rue, contes et pièces contemporaines."
   }
 ];
 
@@ -259,28 +298,19 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "1",
     name: "Sophie Martin",
     country: "France",
-    flag: "🇫🇷",
+    flag: "FR",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
-    comment: "Ganvié a été une expérience magique et le système de réservation en ligne avec confirmation immédiate sur Afroku m'a beaucoup rassurée avant mon départ.",
+    comment: "J'ai pu réserver mes billets pour les Vodun Days à Ouidah et acheter un tam-tam authentique livré directement à mon hôtel à Cotonou via Afroku !",
     rating: 5.0
   },
   {
     id: "2",
     name: "James Anderson",
     country: "Canada",
-    flag: "🇨🇦",
+    flag: "CA",
     avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80",
-    comment: "Notre guide à Ouidah était exceptionnel. La possibilité de payer via Mobile Money ou Carte bancaire directement sur le site simplifie énormément le voyage au Bénin.",
+    comment: "Le concert WeLoveEya était fantastique. Saisir mon numéro Mobile Money et recevoir mon pass QR Code instantanément sur mon téléphone a été hyper fluide.",
     rating: 4.9
-  },
-  {
-    id: "3",
-    name: "Clara Bernard",
-    country: "Bénin",
-    flag: "🇧🇯",
-    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=150&q=80",
-    comment: "En tant que Béninoise passionnée de notre patrimoine, Afroku me permet de redécouvrir mon pays facilement tout en soutenant nos guides locaux.",
-    rating: 5.0
   }
 ];
 

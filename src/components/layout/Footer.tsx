@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Heart } from "lucide-react";
+import { Heart, Globe, Share2, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -15,20 +17,20 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              La plateforme de référence pour découvrir, réserver et vivre des expériences culturelles, touristiques et artistiques authentiques au Bénin.
+              La plateforme de référence pour découvrir, réserver et vivre des expériences culturelles, touristiques, d'artisanat et d'événementiel au Bénin.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all">
-                <Facebook className="w-4 h-4" />
+              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all" title="Site Web">
+                <Globe className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all">
-                <Twitter className="w-4 h-4" />
+              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all" title="Partager">
+                <Share2 className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all">
-                <Instagram className="w-4 h-4" />
+              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all" title="Email">
+                <Mail className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all">
-                <Linkedin className="w-4 h-4" />
+              <a href="#" className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0F382C] transition-all" title="Téléphone">
+                <Phone className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -40,10 +42,10 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-400">
               <li><Link href="/explorer" className="hover:text-white transition-colors">Destinations</Link></li>
-              <li><Link href="/explorer?cat=activites" className="hover:text-white transition-colors">Activités</Link></li>
+              <li><Link href="/evenements" className="hover:text-white transition-colors">Événements & Festivals</Link></li>
+              <li><Link href="/marketplace" className="hover:text-white transition-colors">Artisanat Made in Bénin</Link></li>
               <li><Link href="/guides" className="hover:text-white transition-colors">Guides certifiés</Link></li>
               <li><Link href="/itineraires" className="hover:text-white transition-colors">Itinéraires</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Blog Culture</Link></li>
             </ul>
           </div>
 
@@ -77,7 +79,7 @@ export function Footer() {
               />
               <button 
                 type="submit"
-                className="w-full py-2.5 px-4 bg-[#E85D04] hover:bg-[#D9531E] text-white text-sm font-semibold rounded-lg shadow transition-all"
+                className="w-full py-2.5 px-4 bg-[#E85D04] hover:bg-[#D9531E] text-white text-sm font-semibold rounded-lg shadow transition-all cursor-pointer"
               >
                 S'abonner
               </button>
