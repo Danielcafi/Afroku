@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ShoppingBag, Ticket, Menu, X, UserCheck, Shield, User, Sparkles } from "lucide-react";
+import { ShoppingBag, Ticket, Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [roleMenuOpen, setRoleMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#E5DEC9]/60 shadow-xs">
@@ -58,47 +57,6 @@ export function Navbar() {
           {/* Right Action Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             
-            {/* Quick Demo Switcher */}
-            <div className="relative">
-              <button 
-                onClick={() => setRoleMenuOpen(!roleMenuOpen)}
-                className="text-xs font-bold text-gray-700 bg-white/80 hover:bg-white px-3.5 py-2 rounded-full border border-[#DCD3BE] flex items-center gap-2 shadow-xs transition-all cursor-pointer"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-[#E85D04]" />
-                <span>Espaces Démo</span>
-                <span className="text-[10px]">▼</span>
-              </button>
-
-              {roleMenuOpen && (
-                <div className="absolute right-0 mt-2 w-56 bg-[#FAF7F2] rounded-2xl shadow-2xl border border-[#DCD3BE] py-2 z-50">
-                  <div className="px-3 py-1 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-                    Choisir un rôle
-                  </div>
-                  <Link 
-                    href="/dashboard/client" 
-                    onClick={() => setRoleMenuOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-gray-800 hover:bg-[#ECFDF5] hover:text-[#0F382C]"
-                  >
-                    <User className="w-4 h-4 text-[#0F382C]" /> Espace Voyageur
-                  </Link>
-                  <Link 
-                    href="/dashboard/partner" 
-                    onClick={() => setRoleMenuOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-gray-800 hover:bg-[#FFF7ED] hover:text-[#E85D04]"
-                  >
-                    <UserCheck className="w-4 h-4 text-[#E85D04]" /> Espace Artisans & Guides
-                  </Link>
-                  <Link 
-                    href="/dashboard/admin" 
-                    onClick={() => setRoleMenuOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-gray-800 hover:bg-purple-50 hover:text-purple-700"
-                  >
-                    <Shield className="w-4 h-4 text-purple-600" /> Dashboard Admin
-                  </Link>
-                </div>
-              )}
-            </div>
-
             <Link 
               href="/connexion" 
               className="text-xs font-bold text-gray-900 hover:text-[#E85D04] px-4 py-2.5 rounded-full border border-gray-300 transition-all"
