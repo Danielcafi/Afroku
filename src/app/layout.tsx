@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Afroku - Plateforme Culturelle & Tourisme au Bénin 🇧🇯",
+  title: "Afroku - Plateforme Culturelle & Tourisme au Bénin",
   description: "Découvrez, réservez et payez en ligne par Mobile Money vos expériences touristiques, guides certifiés, artisanat Made in Benin et billets d'événements (Vodun Days, WeLoveEya).",
 };
 

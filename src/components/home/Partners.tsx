@@ -2,24 +2,39 @@ import { PARTNERS } from "@/data/mockData";
 
 export function Partners() {
   return (
-    <section className="py-12 bg-[#F8FAFC] border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+    <section className="py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h2 className="text-xl sm:text-2xl font-extrabold text-[#0F382C] tracking-tight">
-          Nos partenaires
-        </h2>
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          
+          {/* Left: Partners Grid */}
+          <div className="lg:w-2/3 flex flex-wrap items-center justify-center gap-5">
+            {PARTNERS.map((p, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center gap-1 px-6 py-4 rounded-2xl border border-white/8 hover:border-white/20 transition-all group cursor-pointer"
+                style={{ backdropFilter: "blur(12px)", background: "rgba(255,255,255,0.04)" }}
+              >
+                <span className="text-base sm:text-lg font-black text-white/60 group-hover:text-white transition-colors">
+                  {p.name}
+                </span>
+                <span className="text-[9px] font-bold text-white/30 uppercase tracking-wider">
+                  {p.subtitle}
+                </span>
+              </div>
+            ))}
+          </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 opacity-80 hover:opacity-100 transition-opacity pt-2">
-          {PARTNERS.map((p, idx) => (
-            <div key={idx} className="flex flex-col items-center group cursor-pointer">
-              <span className="text-base sm:text-lg font-black text-gray-800 group-hover:text-[#E85D04] transition-colors">
-                {p.name}
-              </span>
-              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
-                {p.subtitle}
-              </span>
-            </div>
-          ))}
+          {/* Right: Text */}
+          <div className="lg:w-1/3 text-center lg:text-left space-y-3">
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-white/40 block">
+              Ils nous font confiance
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+              Nos <span className="text-[#E85D04]">partenaires</span>
+            </h2>
+          </div>
+
         </div>
 
       </div>

@@ -45,7 +45,7 @@ export default function GuidesPage() {
         
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <span className="bg-[#ECFDF5] text-[#0F382C] text-xs font-extrabold px-3 py-1 rounded-full border border-[#0F382C]/20">
-            Guides Locaux Vérifiés 🇧🇯
+            Guides Locaux Vérifiés
           </span>
           <h1 className="text-3xl sm:text-4xl font-black text-[#0F382C]">
             Nos Guides Certifiés Afroku

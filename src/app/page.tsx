@@ -12,8 +12,8 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-gray-900 font-sans antialiased">
-      <Navbar />
+    <div className="page-content min-h-screen flex flex-col text-white font-sans antialiased">
+      <Navbar overlay />
       <main className="flex-1">
         <HeroSearch />
         <BeninExperienceSteps />

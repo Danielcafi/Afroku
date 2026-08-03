@@ -3,57 +3,63 @@ import { TESTIMONIALS } from "@/data/mockData";
 
 export function Testimonials() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-32 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F382C] tracking-tight">
-            Ce que disent nos voyageurs
-          </h2>
-          <p className="text-sm text-gray-500">
-            Plus de 12 000 voyageurs nous font confiance pour leurs séjours
-          </p>
-        </div>
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          
+          {/* Left: Text */}
+          <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-amber-400 block">
+              Temoignages
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
+              Ce que disent nos <span className="text-[#E85D04] italic">voyageurs</span>
+            </h2>
+            <p className="text-white/55 text-base leading-relaxed">
+              Plus de 12 000 voyageurs nous font confiance pour leurs sejours
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#F8FAFC] p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4"
-            >
-              <div className="space-y-3">
-                {/* Rating */}
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500" />
-                  ))}
-                  <span className="text-xs font-bold text-gray-700 ml-1">{item.rating.toFixed(1)}</span>
+          {/* Right: Testimonials Grid */}
+          <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {TESTIMONIALS.map((item, idx) => (
+              <div
+                key={item.id}
+                className={`group relative p-7 rounded-3xl border border-white/10 hover:border-white/25 transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between space-y-5 ${
+                  idx === 0 ? "sm:col-span-2" : ""
+                }`}
+                style={{ backdropFilter: "blur(20px)", background: "rgba(255,255,255,0.05)" }}
+              >
+                <span className="text-6xl font-serif text-white/8 leading-none select-none absolute top-4 right-6">&ldquo;</span>
+
+                <div className="space-y-4 relative z-10">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                    ))}
+                    <span className="text-xs font-bold text-white/60 ml-1.5">{item.rating.toFixed(1)}</span>
+                  </div>
+                  <p className="text-sm text-white/70 italic leading-relaxed">
+                    &ldquo;{item.comment}&rdquo;
+                  </p>
                 </div>
 
-                {/* Comment */}
-                <p className="text-sm text-gray-700 italic leading-relaxed">
-                  "{item.comment}"
-                </p>
-              </div>
-
-              {/* User info */}
-              <div className="flex items-center gap-3 pt-3 border-t border-gray-200/60">
-                <img
-                  src={item.avatar}
-                  alt={item.name}
-                  className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
-                />
-                <div>
-                  <h4 className="text-sm font-bold text-gray-900 flex items-center gap-1.5">
-                    <span>{item.name}</span>
-                    <span>{item.flag}</span>
-                  </h4>
-                  <p className="text-xs text-gray-400 font-medium">{item.country}</p>
+                <div className="flex items-center gap-3 pt-5 border-t border-white/8 relative z-10">
+                  <img
+                    src={item.avatar}
+                    alt={item.name}
+                    className="w-11 h-11 rounded-full object-cover border-2 border-white/20 shadow-lg"
+                  />
+                  <div>
+                    <h4 className="text-sm font-bold text-white">{item.name}</h4>
+                    <p className="text-xs text-white/40 font-medium">{item.country}</p>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
 
-            </div>
-          ))}
         </div>
 
       </div>
