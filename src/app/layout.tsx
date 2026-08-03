@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LandingBg } from "@/components/layout/LandingBg";
 
 export const metadata: Metadata = {
   title: "Afroku - Plateforme Culturelle & Tourisme au Bénin",
@@ -13,8 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="h-full antialiased">
-      <body className="min-h-full flex flex-col font-sans bg-white text-gray-900">
-        {children}
+      <body className="min-h-full flex flex-col font-sans bg-[#F8FAFC] text-gray-900">
+        <LandingBg>{children}</LandingBg>
       </body>
     </html>
   );
