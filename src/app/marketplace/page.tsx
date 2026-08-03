@@ -19,7 +19,7 @@ export default function MarketplacePage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8FAFC]">
+    <div className="min-h-screen flex flex-col bg-[#ECFDF5]">
       <Navbar />
 
       {/* Hero Banner */}

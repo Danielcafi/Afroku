@@ -23,7 +23,7 @@ export default function TouristDashboard() {
   const [activeTab, setActiveTab] = useState("tableau-de-bord");
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] flex text-gray-900 font-sans">
+    <div className="min-h-screen bg-[#ECFDF5] flex text-gray-900 font-sans">
       
       {/* Sidebar - Deep Forest Green */}
       <aside className="w-64 bg-[#0F382C] text-white flex flex-col justify-between p-5 hidden md:flex shrink-0">
@@ -157,7 +157,7 @@ export default function TouristDashboard() {
               Prochaine réservation
             </h2>
 
-            <div className="p-4 bg-[#F8FAFC] rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-4 bg-[#ECFDF5] rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <img 
                   src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=200&q=80" 

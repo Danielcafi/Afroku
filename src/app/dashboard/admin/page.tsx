@@ -28,7 +28,7 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("tableau-de-bord");
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] flex text-gray-900 font-sans">
+    <div className="min-h-screen bg-[#ECFDF5] flex text-gray-900 font-sans">
       
       {/* Sidebar */}
       <aside className="w-64 bg-[#0F382C] text-white flex flex-col justify-between p-5 hidden md:flex shrink-0">

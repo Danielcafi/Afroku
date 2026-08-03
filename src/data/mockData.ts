@@ -323,3 +323,91 @@ export const PARTNERS = [
   { name: "MTN", subtitle: "EVERYWHERE YOU GO" },
   { name: "FedaPay", subtitle: "PAIEMENT EN LIGNE" }
 ];
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  publishedAt: string;
+  readTime: number;
+  image: string;
+  tags: string[];
+}
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "blog-1",
+    slug: "guide-complet-vodun-days-2027",
+    title: "Guide Complet des Vodun Days 2027 : Dates, Access et Conseils",
+    excerpt: "Tout ce que vous devez savoir pour vivre pleinement les Vodun Days à Ouidah : programme, billetterie, hébergements et conseils de terrain.",
+    category: "Événements",
+    author: "Rédaction Afroku",
+    publishedAt: "15 Juin 2026",
+    readTime: 8,
+    image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=800&q=80",
+    tags: ["Vodun Days", "Ouidah", "Festival", "Culture"]
+  },
+  {
+    id: "blog-2",
+    slug: "safari-pendjari-conseils-pratiques",
+    title: "Safari dans le Parc de la Pendjari : Guide Pratique pour un Expérience Inoubliable",
+    excerpt: "Quand partir, que voir, comment préparer son safari ? Découvrez nos conseils pour observer éléphants, lions et buffles dans leur habitat naturel.",
+    category: "Nature & Safari",
+    author: "Guide Certifié",
+    publishedAt: "2 Juin 2026",
+    readTime: 12,
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
+    tags: ["Pendjari", "Safari", "Faune", "Nature"]
+  },
+  {
+    id: "blog-3",
+    slug: "gastronomie-beninoise-top-10-plats",
+    title: "Top 10 des Plats Béninois à Goûter Absolument",
+    excerpt: "Du kuli-kuli au wagassi, en passant par le pâte et le sauce d'arachide : un tour d'horizon de la gastronomie béninoise qui vous donnera l'eau à la bouche.",
+    category: "Gastronomie",
+    author: "Chef Amoussou",
+    publishedAt: "28 Mai 2026",
+    readTime: 6,
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
+    tags: ["Gastronomie", "Cuisine", "Bénin", "Tradition"]
+  },
+  {
+    id: "blog-4",
+    slug: "ganvie-venise-africaine-tourisme-durable",
+    title: "Ganvié : Comment le Tourisme Lacustre Soutient l'Économie Locale",
+    excerpt: "Découvrez comment les visiteurs contribuent directement au bien-être des habitants de Ganvié tout en vivant une expérience culturelle unique sur les eaux du lac Nokoué.",
+    category: "Tourisme Durable",
+    author: "Rédaction Afroku",
+    publishedAt: "20 Mai 2026",
+    readTime: 7,
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=80",
+    tags: ["Ganvié", "Lacustre", "Durable", "Communauté"]
+  },
+  {
+    id: "blog-5",
+    slug: "palais-abomey-histoire-royaute-dahomeenne",
+    title: "Les Palais Royaux d'Abomey : Plongée au Cœur de l'Histoire Dahoméenne",
+    excerpt: "Classés au patrimoine mondial de l'UNESCO, les palais d'Abomey racontent 300 ans d'histoire. Suivez-nous dans cette immersion historique unique.",
+    category: "Histoire & Patrimoine",
+    author: "Historien Béninois",
+    publishedAt: "15 Mai 2026",
+    readTime: 10,
+    image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+    tags: ["Abomey", "UNESCO", "Palais", "Histoire"]
+  },
+  {
+    id: "blog-6",
+    slug: "artisanat-beninois-savoir-faire",
+    title: "L'Artisanat Béninois : Un Savoir-Faire Transmis de Génération en Génération",
+    excerpt: "Des bronze d'Abomey aux tissus bogolan, découvrez les artisans qui perpétuent les traditions ancestrales du Bénin et comment les soutenir.",
+    category: "Artisanat",
+    author: "Rédaction Afroku",
+    publishedAt: "10 Mai 2026",
+    readTime: 9,
+    image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=800&q=80",
+    tags: ["Artisanat", "Bronze", "Bogolan", "Tradition"]
+  }
+];

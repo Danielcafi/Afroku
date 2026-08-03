@@ -6,8 +6,7 @@ import { Heart, Globe, Share2, Mail, Phone, MapPin, MessageCircle, Send, AtSign 
 export function Footer() {
   return (
     <footer
-      className="relative z-10 pt-24 pb-10 border-t border-white/10"
-      style={{ backdropFilter: "blur(30px)", background: "rgba(5,20,14,0.75)" }}
+      className="relative z-10 pt-24 pb-10 border-t border-white/10 bg-[#0F382C]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -66,6 +65,7 @@ export function Footer() {
                 { href: "/marketplace", label: "Artisanat Made in Bénin" },
                 { href: "/guides", label: "Guides certifiés" },
                 { href: "/itineraires", label: "Itinéraires" },
+                { href: "/blog", label: "Blog" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-white hover:pl-1 transition-all duration-200">
