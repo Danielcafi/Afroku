@@ -64,12 +64,12 @@ export default function ExplorerPage() {
             
             <div className="flex items-center justify-between pb-3 border-b border-gray-100">
               <h3 className="font-extrabold text-sm text-[#0F382C] flex items-center gap-2">
-                <SlidersHorizontal className="w-4 h-4 text-[#E85D04]" />
+                <SlidersHorizontal className="w-4 h-4 text-[#10B981]" />
                 <span>Filtres</span>
               </h3>
               <button 
                 onClick={() => { setSelectedCities([]); setMaxPrice(150000); }} 
-                className="text-[11px] font-bold text-gray-400 hover:text-[#E85D04]"
+                className="text-[11px] font-bold text-gray-400 hover:text-[#10B981]"
               >
                 Réinitialiser
               </button>
@@ -99,7 +99,7 @@ export default function ExplorerPage() {
             <div className="space-y-2.5 pt-4 border-t border-gray-100">
               <div className="flex justify-between items-center text-xs font-bold">
                 <span className="text-gray-900 uppercase tracking-wide">Prix (par personne)</span>
-                <span className="text-[#E85D04] font-extrabold">{maxPrice.toLocaleString()} FCFA</span>
+                <span className="text-[#10B981] font-extrabold">{maxPrice.toLocaleString()} FCFA</span>
               </div>
               <input
                 type="range"
@@ -108,7 +108,7 @@ export default function ExplorerPage() {
                 step="5000"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
-                className="w-full accent-[#E85D04]"
+                className="w-full accent-[#10B981]"
               />
               <div className="flex justify-between text-[10px] text-gray-400 font-medium">
                 <span>5 000 FCFA</span>
@@ -221,7 +221,7 @@ export default function ExplorerPage() {
                       </div>
 
                       <Link href={`/activites/${exp.slug}`}>
-                        <h3 className="font-bold text-base text-gray-900 group-hover:text-[#E85D04] transition-colors leading-snug">
+                        <h3 className="font-bold text-base text-gray-900 group-hover:text-[#10B981] transition-colors leading-snug">
                           {exp.title}
                         </h3>
                       </Link>
@@ -260,7 +260,7 @@ export default function ExplorerPage() {
               {/* Fake Interactive Map Header */}
               <div className="bg-[#0F382C] text-white px-4 py-3 flex items-center justify-between">
                 <span className="text-xs font-bold flex items-center gap-1.5">
-                  <MapPin className="w-4 h-4 text-[#E85D04]" />
+                  <MapPin className="w-4 h-4 text-[#10B981]" />
                   Carte des activités du Bénin
                 </span>
                 <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded text-emerald-100 font-mono">
@@ -291,7 +291,7 @@ export default function ExplorerPage() {
 
                   {/* Pin 3: Ganvié & Cotonou */}
                   <div className="absolute bottom-[20%] right-[25%] bg-[#0F382C] text-white p-2 rounded-xl shadow-xl border border-white flex items-center gap-2 z-10">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#E85D04]" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
                     <span className="text-[11px] font-bold">Ganvié (25 000 F)</span>
                   </div>
 

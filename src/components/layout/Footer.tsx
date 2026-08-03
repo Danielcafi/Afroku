@@ -17,28 +17,20 @@ export function Footer() {
           {/* Brand Block — spans 2 cols */}
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="inline-block group">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1C4334] to-[#0F382C] flex items-center justify-center text-amber-300 font-serif font-black text-xl shadow-xl border border-amber-500/20 group-hover:scale-105 transition-transform">
-                  <span className="tracking-tighter">AK</span>
-                </div>
-                <div>
-                  <span className="text-3xl font-serif font-black tracking-tight text-white">
-                    Afro<span className="text-[#E85D04]">.Ku</span>
-                  </span>
-                  <p className="text-[9px] font-bold text-white/40 uppercase tracking-widest -mt-0.5">
-                    Bénin • Culture & Safaris
-                  </p>
-                </div>
-              </div>
+              <img 
+                src="/afroku-logo.png" 
+                alt="Afroku Logo" 
+                className="h-56 w-auto group-hover:scale-105 transition-transform"
+              />
             </Link>
 
             <p className="text-white/50 text-sm leading-relaxed max-w-sm">
-              La plateforme de référence pour découvrir, réserver et vivre des expériences culturelles, touristiques, d&apos;artisanat et d&apos;événementiel au Bénin.
+              Un point de rencontre entre l&apos;âme d&apos;une nation et son essor économique. Grâce à une connaissance intime du territoire et une analyse fine des données locales, nous vous guidons vers des expériences culturelles immersives et des opportunités stratégiques uniques. L&apos;alliance parfaite de la tradition et de l&apos;avenir.
             </p>
 
             {/* Location */}
             <div className="flex items-center gap-2 text-white/40 text-xs font-medium">
-              <MapPin className="w-4 h-4 text-[#E85D04]" />
+              <MapPin className="w-4 h-4 text-[#10B981]" />
               <span>Cotonou, République du Bénin</span>
             </div>
 
@@ -56,7 +48,7 @@ export function Footer() {
                   key={label}
                   href="#"
                   title={label}
-                  className="w-9 h-9 rounded-xl border border-white/10 hover:border-[#E85D04]/50 hover:bg-[#E85D04]/10 flex items-center justify-center text-white/40 hover:text-[#E85D04] transition-all"
+                  className="w-9 h-9 rounded-xl border border-white/10 hover:border-[#10B981]/50 hover:bg-[#10B981]/10 flex items-center justify-center text-white/40 hover:text-[#10B981] transition-all"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -109,15 +101,15 @@ export function Footer() {
             <h4 className="text-xs font-black text-white uppercase tracking-[0.2em]">Contact</h4>
             <ul className="space-y-3 text-sm text-white/45">
               <li className="flex items-start gap-2">
-                <Mail className="w-4 h-4 text-[#E85D04] mt-0.5 shrink-0" />
+                <Mail className="w-4 h-4 text-[#10B981] mt-0.5 shrink-0" />
                 <span>contact@afroku.com</span>
               </li>
               <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 text-[#E85D04] mt-0.5 shrink-0" />
+                <Phone className="w-4 h-4 text-[#10B981] mt-0.5 shrink-0" />
                 <span>+229 XX XX XX XX</span>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#E85D04] mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-[#10B981] mt-0.5 shrink-0" />
                 <span>Cotonou, Bénin</span>
               </li>
             </ul>
@@ -133,12 +125,12 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Votre email"
-                className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/30 focus:outline-none focus:ring-1 focus:ring-[#E85D04]/50"
+                className="w-full px-4 py-3 rounded-xl text-sm text-white placeholder-white/30 focus:outline-none focus:ring-1 focus:ring-[#10B981]/50"
                 style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
               />
               <button
                 type="submit"
-                className="w-full py-3 px-4 bg-[#E85D04] hover:bg-[#D9531E] text-white text-xs font-extrabold rounded-xl shadow-lg transition-all cursor-pointer"
+                className="w-full py-3 px-4 bg-[#10B981] hover:bg-[#059669] text-white text-xs font-extrabold rounded-xl shadow-lg transition-all cursor-pointer"
               >
                 S&apos;abonner
               </button>

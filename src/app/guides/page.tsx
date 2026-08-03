@@ -61,12 +61,12 @@ export default function GuidesPage() {
               <div className="space-y-4 text-center">
                 <div className="relative w-20 h-20 mx-auto">
                   <img src={g.avatar} alt={g.name} className="w-full h-full rounded-full object-cover border-4 border-[#0F382C]/10" />
-                  <ShieldCheck className="w-6 h-6 text-[#E85D04] absolute bottom-0 right-0 bg-white rounded-full p-0.5 shadow" />
+                  <ShieldCheck className="w-6 h-6 text-[#10B981] absolute bottom-0 right-0 bg-white rounded-full p-0.5 shadow" />
                 </div>
 
                 <div>
                   <h3 className="font-extrabold text-lg text-gray-900">{g.name}</h3>
-                  <p className="text-xs font-bold text-[#E85D04]">{g.specialty}</p>
+                  <p className="text-xs font-bold text-[#10B981]">{g.specialty}</p>
                   <p className="text-xs text-gray-500 flex items-center justify-center gap-1 mt-1">
                     <MapPin className="w-3.5 h-3.5" /> {g.location}
                   </p>

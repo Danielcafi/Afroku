@@ -26,7 +26,7 @@ export default function MarketplacePage() {
       <section className="bg-[#0F382C] text-white py-12 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
           <div className="space-y-3 max-w-xl">
-            <span className="bg-[#E85D04] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            <span className="bg-[#10B981] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
               Made in Bénin
             </span>
             <h1 className="text-3xl sm:text-4xl font-black tracking-tight">
@@ -38,7 +38,7 @@ export default function MarketplacePage() {
           </div>
 
           <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center shrink-0">
-            <ShoppingBag className="w-10 h-10 text-[#E85D04] mx-auto mb-2" />
+            <ShoppingBag className="w-10 h-10 text-[#10B981] mx-auto mb-2" />
             <span className="text-xl font-extrabold text-white block">{cartCount} articles</span>
             <span className="text-xs text-emerald-200">Dans votre panier</span>
           </div>
@@ -96,10 +96,10 @@ export default function MarketplacePage() {
                 <div className="p-5 space-y-3 flex-1 flex flex-col justify-between">
                   <div className="space-y-1.5">
                     <p className="text-[11px] text-gray-400 font-bold uppercase tracking-wider flex items-center gap-1">
-                      <MapPin className="w-3 h-3 text-[#E85D04]" />
+                      <MapPin className="w-3 h-3 text-[#10B981]" />
                       {product.artisanName}
                     </p>
-                    <h3 className="font-extrabold text-base text-gray-900 group-hover:text-[#E85D04] transition-colors leading-snug">
+                    <h3 className="font-extrabold text-base text-gray-900 group-hover:text-[#10B981] transition-colors leading-snug">
                       {product.name}
                     </h3>
                     <p className="text-xs text-gray-500 line-clamp-2">
@@ -117,7 +117,7 @@ export default function MarketplacePage() {
 
                     <button
                       onClick={() => handleAddToCart(product.name)}
-                      className="px-3.5 py-2 bg-[#E85D04] hover:bg-[#D9531E] text-white text-xs font-bold rounded-xl shadow transition-all flex items-center gap-1 cursor-pointer"
+                      className="px-3.5 py-2 bg-[#10B981] hover:bg-[#059669] text-white text-xs font-bold rounded-xl shadow transition-all flex items-center gap-1 cursor-pointer"
                     >
                       <ShoppingBag className="w-3.5 h-3.5" />
                       <span>Acheter</span>
@@ -136,7 +136,7 @@ export default function MarketplacePage() {
             <p className="text-xs text-gray-500">Récupérez vos achats directement pendant votre voyage au Bénin.</p>
           </div>
           <div className="space-y-1">
-            <ShieldCheck className="w-6 h-6 text-[#E85D04] mx-auto" />
+            <ShieldCheck className="w-6 h-6 text-[#10B981] mx-auto" />
             <h4 className="font-extrabold text-sm text-gray-900">Certificat d'Authenticité</h4>
             <p className="text-xs text-gray-500">Chaque objet d'art est accompagné d'un certificat d'artisan béninois.</p>
           </div>

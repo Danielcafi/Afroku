@@ -31,7 +31,7 @@ export function Partners() {
               Ils nous font confiance
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Nos <span className="text-[#E85D04]">partenaires</span>
+              Nos <span className="text-[#10B981]">partenaires</span>
             </h2>
           </div>
 

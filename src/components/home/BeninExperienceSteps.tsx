@@ -30,7 +30,7 @@ export function BeninExperienceSteps() {
       location: "Tout le Bénin",
       description: "Achetez vos pass officiels pour les Vodun Days & WeLoveEya, et repartez avec l'artisanat sculpté à la main.",
       badge: "Festivals & Artisanat",
-      accent: "from-orange-400 to-[#E85D04]",
+      accent: "from-orange-400 to-[#10B981]",
       image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=600&q=80"
     }
   ];
@@ -42,19 +42,24 @@ export function BeninExperienceSteps() {
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           
           {/* Left: Text */}
-          <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
+          <div className="lg:w-1/2 space-y-6 lg:sticky lg:top-32">
             <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-amber-400 block">
               Un Séjour Inoubliable
             </span>
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
-              L&apos;Expérience Bénin en <span className="text-[#E85D04] italic">3 Temps</span>
+              Ne visitez pas le Bénin. <span className="text-[#10B981] italic">Vit-le.</span>
             </h2>
-            <p className="text-white/60 text-base leading-relaxed">
-              Une immersion complète entre patrimoine spirituel, biodiversité préservée et festivals vibrants.
+            <p className="text-white/60 text-lg leading-relaxed space-y-4">
+              <span className="block">
+                Explorer le Bénin, c&apos;est pousser la porte d&apos;un monde où <strong className="text-white">chaque geste est une tradition</strong> et <strong className="text-white">chaque sourire une histoire</strong>. Avec AfroKu, cette richesse prend vie sous vos yeux. Plus qu&apos;un simple guide, c&apos;est une invitation à <strong className="text-[#10B981]">ressentir le pays dans toute sa lumière et sa profondeur</strong>.
+              </span>
+              <span className="block">
+                Des ruelles gorgées d&apos;histoire de <strong className="text-white">Ouidah</strong> aux majestueux <strong className="text-white">palais d&apos;Abomey</strong>, de l&apos;éco-cité lacustre de <strong className="text-white">Ganvié</strong> aux étals chatoyants de nos <strong className="text-white">marchés gourmands</strong>, le Bénin s&apos;éveille à chaque page.
+              </span>
             </p>
             <Link
               href="/explorer"
-              className="inline-flex items-center gap-2 text-sm font-extrabold text-amber-400 hover:text-[#E85D04] transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-extrabold text-amber-400 hover:text-[#10B981] transition-colors group"
             >
               <span>Tout explorer</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -62,7 +67,7 @@ export function BeninExperienceSteps() {
           </div>
 
           {/* Right: Step Cards */}
-          <div className="lg:w-2/3 space-y-6">
+          <div className="lg:w-1/2 space-y-6">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (

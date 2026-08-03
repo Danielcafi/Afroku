@@ -10,19 +10,24 @@ export function ArtisanatShowcase() {
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           
           {/* Left: Text */}
-          <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-emerald-400 block">
-              Made in Benin
-            </span>
+          <div className="lg:w-1/2 space-y-6 lg:sticky lg:top-32">
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
-              Artisanat <span className="text-[#E85D04] italic">Authentique</span>
+              Gardienne de nos Traditions, <span className="text-[#10B981] italic">Révélatrice d&apos;Avenir</span>
             </h2>
-            <p className="text-white/55 text-sm leading-relaxed">
-              Commandez en ligne des pieces uniques sculptees par les maitres artisans beninois
+            <p className="text-white/60 text-lg leading-relaxed space-y-4">
+              <span className="block">
+                Sur AfroKu, le numérique ne nous éloigne pas : il nous rassemble <strong className="text-white">autour du feu</strong>.
+              </span>
+              <span className="block">
+                Nous avons pensé cette plateforme comme un <strong className="text-white">espace vivant</strong> où chaque Béninois, chaque passionné et chaque curieux devient <strong className="text-[#10B981]">l&apos;artisan du récit national</strong>. Comme les tambours qui annoncent la sortie des masques sacrés, <strong className="text-white">votre voix fait vibrer</strong> toute notre communauté.
+              </span>
+              <span className="block">
+                Une photo capturée face à la <strong className="text-white">statue de Toffa Ier</strong>, le souvenir d&apos;une soirée à écouter le rythme du <strong className="text-white">Sato</strong>, la découverte d&apos;un artisanat local ou le goût authentique de nos <strong className="text-white">plats d&apos;antan</strong>... Chaque contribution est une <strong className="text-[#10B981]">étincelle qui éclaire notre patrimoine</strong>. Nous avançons <strong className="text-white">main dans la main</strong> pour faire briller l&apos;esprit de chez nous.
+              </span>
             </p>
             <Link
               href="/marketplace"
-              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#E85D04] transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#10B981] transition-colors group"
             >
               <span>Voir toute la boutique</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -30,7 +35,7 @@ export function ArtisanatShowcase() {
           </div>
 
           {/* Right: Products Grid */}
-          <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-5">
             {ARTISANAT_PRODUCTS.map((prod) => (
               <div
                 key={prod.id}
@@ -63,7 +68,7 @@ export function ArtisanatShowcase() {
                   </div>
                   <Link
                     href="/marketplace"
-                    className="w-full py-2.5 rounded-xl border border-white/15 hover:bg-[#E85D04] hover:border-[#E85D04] text-white text-xs font-bold flex items-center justify-center gap-2 transition-all"
+                    className="w-full py-2.5 rounded-xl border border-white/15 hover:bg-[#10B981] hover:border-[#10B981] text-white text-xs font-bold flex items-center justify-center gap-2 transition-all"
                   >
                     <ShoppingBag className="w-3.5 h-3.5" />
                     <span>Voir l&apos;article</span>

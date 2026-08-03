@@ -69,7 +69,7 @@ export default function ReservationPage() {
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-500">Code Billet QR :</span>
-                <span className="font-mono font-bold text-[#E85D04]">AFK-2026-88492</span>
+                <span className="font-mono font-bold text-[#10B981]">AFK-2026-88492</span>
               </div>
             </div>
 
@@ -128,7 +128,7 @@ export default function ReservationPage() {
                 </div>
                 <div className="flex justify-between text-base font-extrabold text-gray-900 pt-3 border-t border-gray-200">
                   <span>Total</span>
-                  <span className="text-[#E85D04]">52 500 FCFA</span>
+                  <span className="text-[#10B981]">52 500 FCFA</span>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function ReservationPage() {
                   onClick={() => setPaymentMethod("mtn")}
                   className={`w-full p-4 rounded-xl border flex items-center gap-4 transition-all text-left ${
                     paymentMethod === "mtn"
-                      ? "border-[#E85D04] bg-[#FFF7ED] ring-2 ring-[#E85D04]/30"
+                      ? "border-[#10B981] bg-[#FFF7ED] ring-2 ring-[#10B981]/30"
                       : "border-gray-200 hover:border-gray-300 bg-white"
                   }`}
                 >
@@ -164,7 +164,7 @@ export default function ReservationPage() {
                   onClick={() => setPaymentMethod("moov")}
                   className={`w-full p-4 rounded-xl border flex items-center gap-4 transition-all text-left ${
                     paymentMethod === "moov"
-                      ? "border-[#E85D04] bg-[#FFF7ED] ring-2 ring-[#E85D04]/30"
+                      ? "border-[#10B981] bg-[#FFF7ED] ring-2 ring-[#10B981]/30"
                       : "border-gray-200 hover:border-gray-300 bg-white"
                   }`}
                 >
@@ -182,7 +182,7 @@ export default function ReservationPage() {
                   onClick={() => setPaymentMethod("card")}
                   className={`w-full p-4 rounded-xl border flex items-center gap-4 transition-all text-left ${
                     paymentMethod === "card"
-                      ? "border-[#E85D04] bg-[#FFF7ED] ring-2 ring-[#E85D04]/30"
+                      ? "border-[#10B981] bg-[#FFF7ED] ring-2 ring-[#10B981]/30"
                       : "border-gray-200 hover:border-gray-300 bg-white"
                   }`}
                 >
@@ -208,7 +208,7 @@ export default function ReservationPage() {
                 <div className="space-y-4">
                   <div className="p-4 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 space-y-2">
                     <p className="font-bold flex items-center gap-1.5">
-                      <Smartphone className="w-4 h-4 text-[#E85D04]" />
+                      <Smartphone className="w-4 h-4 text-[#10B981]" />
                       Instructions pour valider sur votre téléphone :
                     </p>
                     <ol className="list-decimal list-inside space-y-1.5 font-medium pl-1 text-amber-950">
@@ -228,7 +228,7 @@ export default function ReservationPage() {
                   <button
                     onClick={handlePay}
                     disabled={isProcessing}
-                    className="w-full py-4 bg-[#E85D04] hover:bg-[#D9531E] text-white text-base font-extrabold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-[#10B981] hover:bg-[#059669] text-white text-base font-extrabold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer flex items-center justify-center gap-2"
                   >
                     {isProcessing ? (
                       <span className="animate-pulse">Validation en cours...</span>

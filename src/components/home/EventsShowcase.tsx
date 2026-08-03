@@ -27,7 +27,7 @@ export function EventsShowcase() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   {event.badge && (
-                    <span className="absolute top-3 left-3 bg-[#E85D04] text-white text-[10px] font-extrabold px-3 py-0.5 rounded-full shadow-lg">
+                    <span className="absolute top-3 left-3 bg-[#10B981] text-white text-[10px] font-extrabold px-3 py-0.5 rounded-full shadow-lg">
                       {event.badge}
                     </span>
                   )}
@@ -49,7 +49,7 @@ export function EventsShowcase() {
                   </div>
                   <Link
                     href="/evenements"
-                    className="w-full py-2.5 rounded-xl bg-[#E85D04]/15 hover:bg-[#E85D04] border border-[#E85D04]/30 hover:border-[#E85D04] text-[#E85D04] hover:text-white text-xs font-bold text-center transition-all"
+                    className="w-full py-2.5 rounded-xl bg-[#10B981]/15 hover:bg-[#10B981] border border-[#10B981]/30 hover:border-[#10B981] text-[#10B981] hover:text-white text-xs font-bold text-center transition-all"
                   >
                     Reserver un Pass
                   </Link>
@@ -60,18 +60,23 @@ export function EventsShowcase() {
 
           {/* Right: Text */}
           <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#E85D04] block">
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#10B981] block">
               Billetterie Evenements
             </span>
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
-              Grands Festivals <span className="text-[#E85D04] italic">a Venir</span>
+              Grands Festivals <span className="text-[#10B981] italic">a Venir</span>
             </h2>
-            <p className="text-white/55 text-sm leading-relaxed">
-              Vodun Days, Concerts WeLoveEya, Festivals culturels : reservez vos pass officiels en ligne.
+            <p className="text-white/60 text-lg leading-relaxed space-y-4">
+              <span className="block">
+                L&apos;année béninoise vibre au rythme de <strong className="text-white">grands rassemblements culturels et spirituels</strong> : la ferveur mystique des <strong className="text-[#10B981]">Vodoun Days</strong> le 10 janvier, la célébration de la terre lors de la <strong className="text-white">Fête de l&apos;Igname</strong> en août, et l&apos;explosion artistique du <strong className="text-white">Festival International de Porto-Novo</strong>.
+              </span>
+              <span className="block">
+                Des instants intenses où <strong className="text-white">traditions millénaires</strong> et <strong className="text-[#10B981]">fierté nationale</strong> s&apos;unissent.
+              </span>
             </p>
             <Link
               href="/evenements"
-              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#E85D04] transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#10B981] transition-colors group"
             >
               <span>Voir tous les evenements</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

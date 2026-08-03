@@ -14,7 +14,7 @@ export function Testimonials() {
               Temoignages
             </span>
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
-              Ce que disent nos <span className="text-[#E85D04] italic">voyageurs</span>
+              Ce que disent nos <span className="text-[#10B981] italic">voyageurs</span>
             </h2>
             <p className="text-white/55 text-base leading-relaxed">
               Plus de 12 000 voyageurs nous font confiance pour leurs sejours

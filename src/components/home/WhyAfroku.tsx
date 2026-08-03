@@ -20,7 +20,7 @@ export function WhyAfroku() {
       icon: Zap,
       title: "Reservation Instantanee",
       description: "Confirmation immediate et Billet digital avec QR Code utilisable hors-ligne.",
-      accent: "from-[#E85D04] to-red-600",
+      accent: "from-[#10B981] to-red-600",
       glow: "rgba(232,93,4,0.15)"
     },
     {
@@ -68,14 +68,11 @@ export function WhyAfroku() {
 
           {/* Right: Text */}
           <div className="lg:w-1/3 space-y-6 lg:sticky lg:top-32">
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-amber-400 block">
-              Notre Promesse
-            </span>
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
-              Pourquoi choisir <span className="text-[#E85D04] italic">Afroku</span> ?
+              Pourquoi choisir <span className="text-[#10B981] italic">Afroku</span> ?
             </h2>
-            <p className="text-white/55 text-base leading-relaxed">
-              Une solution pensee pour simplifier votre experience de voyage au Benin
+            <p className="text-white/60 text-lg leading-relaxed">
+              AfroKu dépasse la froideur de la donnée. Nous capturons la <strong className="text-white">réalité de nos villes et villages</strong>, l&apos;<strong className="text-white">expertise de nos acteurs locaux</strong> et la <strong className="text-[#10B981]">richesse de notre histoire</strong> pour vous donner les clés d&apos;un <strong className="text-white">voyage immersif, fiable et inoubliable</strong> au cœur du Bénin.
             </p>
           </div>
 

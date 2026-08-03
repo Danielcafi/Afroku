@@ -32,7 +32,7 @@ export default function TouristDashboard() {
           {/* Brand Logo */}
           <Link href="/" className="inline-block px-2">
             <span className="text-2xl font-extrabold text-white tracking-tight">
-              Afro<span className="text-[#E85D04]">ku</span>
+              Afro<span className="text-[#10B981]">ku</span>
             </span>
             <span className="block text-[10px] text-emerald-200 font-bold tracking-widest uppercase">
               Espace Voyageur
@@ -98,7 +98,7 @@ export default function TouristDashboard() {
             </div>
             <button className="p-2 bg-gray-100 rounded-xl text-gray-600 relative">
               <Bell className="w-4 h-4" />
-              <span className="w-2 h-2 rounded-full bg-[#E85D04] absolute top-1.5 right-1.5" />
+              <span className="w-2 h-2 rounded-full bg-[#10B981] absolute top-1.5 right-1.5" />
             </button>
             <div className="flex items-center gap-2.5 pl-2 border-l border-gray-200">
               <img 
@@ -128,7 +128,7 @@ export default function TouristDashboard() {
             <div className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm space-y-2">
               <div className="flex items-center justify-between text-gray-400">
                 <span className="text-xs font-bold uppercase tracking-wider">À venir</span>
-                <Calendar className="w-4 h-4 text-[#E85D04]" />
+                <Calendar className="w-4 h-4 text-[#10B981]" />
               </div>
               <span className="text-2xl font-black text-gray-900 block">2</span>
             </div>

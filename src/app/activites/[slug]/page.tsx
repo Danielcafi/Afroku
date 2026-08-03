@@ -118,7 +118,7 @@ export default function ActivityDetailPage() {
             {/* Quick Info Bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-white rounded-2xl border border-gray-200/80 shadow-sm text-center">
               <div className="space-y-1">
-                <Clock className="w-5 h-5 text-[#E85D04] mx-auto" />
+                <Clock className="w-5 h-5 text-[#10B981] mx-auto" />
                 <span className="block text-[11px] text-gray-400 font-bold uppercase">Durée</span>
                 <span className="block text-xs font-extrabold text-gray-900">{exp.duration}</span>
               </div>
@@ -210,7 +210,7 @@ export default function ActivityDetailPage() {
                 </label>
                 <div className="p-3 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between text-xs font-semibold text-gray-800">
                   <span className="flex items-center gap-2">
-                    <CalendarIcon className="w-4 h-4 text-[#E85D04]" />
+                    <CalendarIcon className="w-4 h-4 text-[#10B981]" />
                     {selectedDate}
                   </span>
                   <button className="text-[#0F382C] font-bold text-[11px] hover:underline">
@@ -239,7 +239,7 @@ export default function ActivityDetailPage() {
               {/* Total Calculation */}
               <div className="pt-2 border-t border-gray-100 flex justify-between items-center text-sm font-bold">
                 <span className="text-gray-600">Total ({travelersCount} pers.)</span>
-                <span className="text-xl font-extrabold text-[#E85D04]">
+                <span className="text-xl font-extrabold text-[#10B981]">
                   {totalAmount.toLocaleString()} FCFA
                 </span>
               </div>
@@ -247,7 +247,7 @@ export default function ActivityDetailPage() {
               {/* Booking Primary CTA Button */}
               <button
                 onClick={handleBooking}
-                className="w-full py-3.5 bg-[#E85D04] hover:bg-[#D9531E] text-white text-base font-extrabold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                className="w-full py-3.5 bg-[#10B981] hover:bg-[#059669] text-white text-base font-extrabold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
               >
                 Réserver maintenant
               </button>

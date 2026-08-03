@@ -15,14 +15,19 @@ export function PopularExperiences() {
               Expériences
             </span>
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
-              Populaires <span className="text-[#E85D04] italic">du moment</span>
+              Populaires <span className="text-[#10B981] italic">du moment</span>
             </h2>
-            <p className="text-white/55 text-sm leading-relaxed">
-              Les activités et circuits les mieux notés par nos voyageurs
+            <p className="text-white/60 text-lg leading-relaxed space-y-4">
+              <span className="block">
+                Les meilleures expériences à vivre au Bénin sont la découverte du <strong className="text-white">vodoun et de ses croyances</strong>, le <strong className="text-white">safari dans les réserves du Nord</strong>, la détente sur les <strong className="text-[#10B981]">plages du littoral</strong>, l&apos;initiation à la <strong className="text-white">gastronomie locale</strong>, la <strong className="text-white">randonnée dans l&apos;Atacora</strong>, la recherche de pièces d&apos;<strong className="text-[#10B981]">artisanat</strong> et les initiatives de <strong className="text-white">tourisme durable</strong>.
+              </span>
+              <span className="block">
+                Le pays se vit autant qu&apos;il se visite.
+              </span>
             </p>
             <Link
               href="/explorer"
-              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#E85D04] transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#10B981] transition-colors group"
             >
               <span>Tout explorer</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -45,7 +50,7 @@ export function PopularExperiences() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   {exp.badge && (
-                    <span className="absolute top-3 left-3 bg-[#E85D04] text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">
+                    <span className="absolute top-3 left-3 bg-[#10B981] text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">
                       {exp.badge}
                     </span>
                   )}
@@ -83,7 +88,7 @@ export function PopularExperiences() {
 
                   <Link
                     href={`/activites/${exp.slug}`}
-                    className="w-full text-center py-2.5 rounded-xl border border-white/15 hover:bg-[#E85D04] hover:border-[#E85D04] text-white text-xs font-bold transition-all"
+                    className="w-full text-center py-2.5 rounded-xl border border-white/15 hover:bg-[#10B981] hover:border-[#10B981] text-white text-xs font-bold transition-all"
                   >
                     Decouvrir
                   </Link>

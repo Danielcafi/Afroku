@@ -35,7 +35,7 @@ export default function AdminDashboard() {
         <div className="space-y-8">
           <Link href="/" className="inline-block px-2">
             <span className="text-2xl font-extrabold text-white tracking-tight">
-              Afro<span className="text-[#E85D04]">ku</span>
+              Afro<span className="text-[#10B981]">ku</span>
             </span>
             <span className="block text-[10px] text-purple-300 font-bold tracking-widest uppercase">
               Dashboard Admin
@@ -153,7 +153,7 @@ export default function AdminDashboard() {
               </h2>
 
               <div className="flex items-center justify-center py-6">
-                <div className="relative w-44 h-44 rounded-full border-12 border-[#0F382C] border-t-[#E85D04] border-r-amber-500 border-l-blue-600 flex items-center justify-center">
+                <div className="relative w-44 h-44 rounded-full border-12 border-[#0F382C] border-t-[#10B981] border-r-amber-500 border-l-blue-600 flex items-center justify-center">
                   <div className="text-center">
                     <span className="text-xl font-black text-gray-900 block">3 245</span>
                     <span className="text-[10px] text-gray-400 font-bold uppercase">Total</span>
@@ -163,7 +163,7 @@ export default function AdminDashboard() {
 
               <div className="grid grid-cols-2 gap-2 text-xs font-semibold text-gray-600">
                 <div className="flex items-center gap-2"><span className="w-3 h-3 rounded bg-[#0F382C]" /> Cotonou (42%)</div>
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded bg-[#E85D04]" /> Ouidah (28%)</div>
+                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded bg-[#10B981]" /> Ouidah (28%)</div>
                 <div className="flex items-center gap-2"><span className="w-3 h-3 rounded bg-amber-500" /> Abomey (15%)</div>
                 <div className="flex items-center gap-2"><span className="w-3 h-3 rounded bg-blue-600" /> Natitingou (15%)</div>
               </div>
@@ -180,7 +180,7 @@ export default function AdminDashboard() {
                   <div key={i} className="flex-1 flex flex-col items-center gap-1 group">
                     <div 
                       style={{ height: `${h}%` }} 
-                      className="w-full bg-[#0F382C] group-hover:bg-[#E85D04] rounded-t-md transition-all"
+                      className="w-full bg-[#0F382C] group-hover:bg-[#10B981] rounded-t-md transition-all"
                     />
                   </div>
                 ))}

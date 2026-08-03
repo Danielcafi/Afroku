@@ -10,56 +10,38 @@ type Destination = {
   badge: string;
   tag: string;
   title: string;
+  subtitle: string;
   shortTitle: string;
-  description: string;
   cta: { label: string; href: string };
 };
 
 const destinations: Destination[] = [
   {
-    image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=1400&q=80",
-    badge: "Vodun Days 2027 & Route des Esclaves",
-    tag: "Ouidah • Bénin",
-    title: "Histoire, Mémoire & Cité Spirituelle",
-    shortTitle: "Ouidah",
-    description: "Célébrez les danses sacrées, explorez le Temple des Pythons et méditez devant la Porte du Non-Retour.",
-    cta: { label: "Réserver l'Expérience", href: "/activites/histoire-culture-ouidah" },
-  },
-  {
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=80",
-    badge: "La Cité Lacustre",
-    tag: "Ganvié • Bénin",
-    title: "La Venise de l'Afrique",
-    shortTitle: "Ganvié",
-    description: "Voguez entre les pilotis de la plus grande cité lacustre d'Afrique sur le lac Nokoué.",
-    cta: { label: "Explorer Ganvié", href: "/explorer?dest=ganvie" },
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1400&q=80",
+    badge: "Histoire & Royaumes",
+    tag: "Abomey • Bénin",
+    title: "Rois, Palais & Trésors",
+    subtitle: "Marchez sur les traces des rois du Dahomey. UNESCO classé.",
+    shortTitle: "Abomey",
+    cta: { label: "Voir les palais", href: "/explorer?dest=abomey" },
   },
   {
     image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=80",
-    badge: "Safari Wild",
-    tag: "Parc Pendjari • Bénin",
-    title: "La Grande Réserve du Nord",
+    badge: "Nature & Safari",
+    tag: "Pendjari • Bénin",
+    title: "Lions, Éléphants & Horizons",
+    subtitle: "Safari en Afrique de l'Ouest. Faune sauvage, émotions fortes.",
     shortTitle: "Pendjari",
-    description: "Safari au cœur de la réserve d'Afrique de l'Ouest : éléphants, lions et antilopes.",
-    cta: { label: "Explorer la Pendjari", href: "/explorer?dest=pendjari" },
+    cta: { label: "Partir en safari", href: "/explorer?dest=pendjari" },
   },
   {
-    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1400&q=80",
-    badge: "Patrimoine Royal",
-    tag: "Abomey • Bénin",
-    title: "Palais Royaux et Trésors Fon",
-    shortTitle: "Abomey",
-    description: "Visitez les palais classés UNESCO des rois du Dahomey et admirent les tentures appliquées.",
-    cta: { label: "Découvrir Abomey", href: "/explorer?dest=abomey" },
-  },
-  {
-    image: "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=1400&q=80",
-    badge: "Terre des Tanéka",
-    tag: "Tatoko • Bénin",
-    title: "Tata Somba, Forteresses du Nord",
-    shortTitle: "Tatoko",
-    description: "Explorez les cases tours des montagnes de l'Atacora, habitations fortifiées uniques au monde.",
-    cta: { label: "Explorer le Nord", href: "/explorer?dest=tatoko" },
+    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=80",
+    badge: "Culture Lacustre",
+    tag: "Ganvié • Bénin",
+    title: "Ville sur l'Eau",
+    subtitle: "La Venise africaine. Vie sur pilotis, marchés flottants.",
+    shortTitle: "Ganvié",
+    cta: { label: "Explorer Ganvié", href: "/explorer?dest=ganvie" },
   },
 ];
 
@@ -78,13 +60,13 @@ export function HeroSearch() {
     setCurrent(index);
     timer.current = setInterval(() => {
       setCurrent((c) => wrap(c + 1));
-    }, 5000);
+    }, 6000);
   }, [current]);
 
   useEffect(() => {
     timer.current = setInterval(() => {
       setCurrent((c) => wrap(c + 1));
-    }, 5000);
+    }, 6000);
     return () => clearInterval(timer.current!);
   }, []);
 
@@ -102,13 +84,15 @@ export function HeroSearch() {
     <section className="relative z-10 pt-28 pb-20 px-4 overflow-hidden min-h-[680px] flex flex-col justify-center">
 
       <div className="relative z-10 max-w-7xl mx-auto space-y-14 w-full">
+        
+        {/* Hero Title - Fixed */}
         <div className="text-center space-y-5 max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-serif font-black tracking-tight text-white leading-none drop-shadow-2xl">
-            Découvrez l&apos;Âme Sauvage & <br />
-            <span className="text-[#E85D04] italic drop-shadow-[0_2px_20px_rgba(232,93,4,0.4)]">Sacrée du Bénin</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif font-black tracking-tight text-white leading-tight drop-shadow-2xl">
+            Voyagez et Découvrez{" "}
+            <span className="text-[#10B981] italic drop-shadow-[0_2px_20px_rgba(16,185,129,0.4)]">le Bénin</span>
           </h1>
-          <p className="text-base sm:text-xl text-white/70 font-medium max-w-2xl mx-auto leading-relaxed">
-            Visitez Ganvié et la Pendjari, achetez vos pass pour les <strong className="text-white">Vodun Days</strong> et commandez l&apos;artisanat d&apos;art béninois avec confirmation instantanée.
+          <p className="text-base sm:text-xl text-white/70 font-medium max-w-3xl mx-auto leading-relaxed">
+            Tourisme, expatriation et affaires au Bénin : le guide complet. Décryptez le Bénin de 2026. Des safaris du Parc de la Pendjari au dynamisme de la Zone GDIZ, accédez aux guides terrain, aux produits locaux et à notre service vérifié pour réussir votre voyage touristique tout en gardant des souvenirs.
           </p>
         </div>
 
@@ -157,7 +141,7 @@ export function HeroSearch() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
               <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-black text-[#0F382C] shadow-md flex items-center gap-2 transition-all duration-500">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#E85D04] animate-pulse" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
                 {destinations[indices[1]].badge}
               </div>
 
@@ -167,8 +151,8 @@ export function HeroSearch() {
                   <h3 className="text-2xl sm:text-4xl font-serif font-black transition-all duration-500">{destinations[indices[1]].title}</h3>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-white/20">
-                  <p className="text-xs text-gray-200 max-w-md hidden sm:block transition-all duration-500">{destinations[indices[1]].description}</p>
-                  <Link href={destinations[indices[1]].cta.href} className="px-6 py-3 bg-[#E85D04] hover:bg-[#D9531E] text-white text-xs font-extrabold rounded-full shadow-lg transition-all flex items-center gap-2">
+                  <p className="text-xs text-gray-200 max-w-md hidden sm:block transition-all duration-500">{destinations[indices[1]].subtitle}</p>
+                  <Link href={destinations[indices[1]].cta.href} className="px-6 py-3 bg-[#10B981] hover:bg-[#059669] text-white text-xs font-extrabold rounded-full shadow-lg transition-all flex items-center gap-2">
                     <span>{destinations[indices[1]].cta.label}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -217,7 +201,7 @@ export function HeroSearch() {
                 onClick={() => goTo(i)}
                 aria-label={`Aller à ${d.tag}`}
                 className={`h-2 rounded-full transition-all cursor-pointer ${
-                  i === current ? "w-8 bg-[#E85D04]" : "w-2.5 bg-[#D6CBBA] hover:bg-[#B8A98F]"
+                  i === current ? "w-8 bg-[#10B981]" : "w-2.5 bg-[#D6CBBA] hover:bg-[#B8A98F]"
                 }`}
               />
             ))}
@@ -231,7 +215,7 @@ export function HeroSearch() {
         >
           <form onSubmit={handleSearch} className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-3 px-4 w-full">
-              <MapPin className="w-5 h-5 text-[#E85D04] shrink-0" />
+              <MapPin className="w-5 h-5 text-[#10B981] shrink-0" />
               <input
                 type="text"
                 placeholder="Où souhaitez-vous aller au Bénin ? (Ganvié, Ouidah, Pendjari...)"
@@ -240,7 +224,7 @@ export function HeroSearch() {
                 className="w-full bg-transparent text-xs sm:text-sm font-semibold text-white focus:outline-none placeholder-white/40"
               />
             </div>
-            <button type="submit" className="w-full sm:w-auto px-8 py-3 bg-[#E85D04] hover:bg-[#D9531E] text-white text-xs font-extrabold rounded-full shadow-md transition-all shrink-0 cursor-pointer flex items-center justify-center gap-2">
+            <button type="submit" className="w-full sm:w-auto px-8 py-3 bg-[#10B981] hover:bg-[#059669] text-white text-xs font-extrabold rounded-full shadow-md transition-all shrink-0 cursor-pointer flex items-center justify-center gap-2">
               <Search className="w-4 h-4" />
               <span>Rechercher</span>
             </button>

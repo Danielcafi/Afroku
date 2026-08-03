@@ -22,7 +22,7 @@ export default function EvenementsPage() {
       {/* Header Banner */}
       <section className="bg-gradient-to-r from-gray-950 via-[#0F382C] to-gray-900 text-white py-14 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center space-y-4 relative z-10">
-          <span className="bg-[#E85D04] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+          <span className="bg-[#10B981] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5" />
             Billetterie Officielle Bénin
           </span>
@@ -54,7 +54,7 @@ export default function EvenementsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent" />
                 
                 {event.badge && (
-                  <span className="absolute top-3 left-3 bg-[#E85D04] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                  <span className="absolute top-3 left-3 bg-[#10B981] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">
                     {event.badge}
                   </span>
                 )}
@@ -74,7 +74,7 @@ export default function EvenementsPage() {
                 <div className="space-y-3">
                   <div className="space-y-1.5 text-xs font-semibold text-gray-700">
                     <div className="flex items-center gap-2 text-[#0F382C]">
-                      <Calendar className="w-4 h-4 text-[#E85D04]" />
+                      <Calendar className="w-4 h-4 text-[#10B981]" />
                       <span>{event.dates}</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-600">
@@ -101,7 +101,7 @@ export default function EvenementsPage() {
                     onClick={() => handleBuyTicket(event.title, event.ticketPrice)}
                     className="px-4 py-2.5 bg-[#0F382C] hover:bg-[#1B5E46] text-white text-xs font-bold rounded-xl shadow transition-all flex items-center gap-1.5 cursor-pointer"
                   >
-                    <Ticket className="w-4 h-4 text-[#E85D04]" />
+                    <Ticket className="w-4 h-4 text-[#10B981]" />
                     <span>Acheter mon Pass</span>
                   </button>
                 </div>

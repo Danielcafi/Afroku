@@ -31,7 +31,7 @@ export default function PartnerDashboard() {
         <div className="space-y-8">
           <Link href="/" className="inline-block px-2">
             <span className="text-2xl font-extrabold text-white tracking-tight">
-              Afro<span className="text-[#E85D04]">ku</span>
+              Afro<span className="text-[#10B981]">ku</span>
             </span>
             <span className="block text-[10px] text-emerald-200 font-bold tracking-widest uppercase">
               Espace Guide / Partenaire
@@ -87,14 +87,14 @@ export default function PartnerDashboard() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="px-4 py-2 bg-[#E85D04] text-white text-xs font-bold rounded-xl shadow hover:bg-[#D9531E]">
+            <button className="px-4 py-2 bg-[#10B981] text-white text-xs font-bold rounded-xl shadow hover:bg-[#059669]">
               + Créer une offre
             </button>
             <div className="flex items-center gap-2.5 pl-2 border-l border-gray-200">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" 
                 alt="Jean Guide" 
-                className="w-9 h-9 rounded-full object-cover border-2 border-[#E85D04]"
+                className="w-9 h-9 rounded-full object-cover border-2 border-[#10B981]"
               />
               <span className="text-xs font-extrabold text-gray-800 hidden sm:inline">Jean Guide</span>
             </div>
@@ -121,7 +121,7 @@ export default function PartnerDashboard() {
             <div className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm space-y-2">
               <div className="flex items-center justify-between text-gray-400">
                 <span className="text-xs font-bold uppercase tracking-wider">Chiffre d'affaires</span>
-                <TrendingUp className="w-4 h-4 text-[#E85D04]" />
+                <TrendingUp className="w-4 h-4 text-[#10B981]" />
               </div>
               <div className="flex items-baseline gap-2">
                 <span className="text-xl font-black text-[#0F382C]">1 250 000 FCFA</span>
@@ -185,8 +185,8 @@ export default function PartnerDashboard() {
                       <stop offset="100%" stopColor="#ffffff" />
                     </linearGradient>
                   </defs>
-                  <circle cx="200" cy="40" r="5" fill="#E85D04" />
-                  <circle cx="400" cy="30" r="5" fill="#E85D04" />
+                  <circle cx="200" cy="40" r="5" fill="#10B981" />
+                  <circle cx="400" cy="30" r="5" fill="#10B981" />
                 </svg>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function PartnerDashboard() {
                       <h4 className="font-bold text-xs text-gray-900 truncate">{item.name}</h4>
                       <p className="text-[10px] text-gray-500 truncate">{item.tour}</p>
                     </div>
-                    <span className="text-[10px] font-bold text-[#E85D04] bg-[#FFF7ED] px-2 py-0.5 rounded">
+                    <span className="text-[10px] font-bold text-[#10B981] bg-[#FFF7ED] px-2 py-0.5 rounded">
                       {item.date}
                     </span>
                   </div>

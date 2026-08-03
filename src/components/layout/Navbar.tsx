@@ -47,17 +47,11 @@ export function Navbar({ overlay = false }: NavbarProps) {
           
           {/* Afroku Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#1C4334] to-[#0F382C] flex items-center justify-center text-amber-300 font-serif font-black text-xl shadow-md border border-amber-500/30 group-hover:scale-105 transition-transform">
-              <span className="tracking-tighter">AK</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-serif font-black tracking-tight text-white">
-                Afro<span className="text-[#E85D04]">.Ku</span>
-              </span>
-              <span className="text-[9px] font-bold uppercase tracking-widest -mt-1 text-white/60">
-                Bénin • Culture & Safaris
-              </span>
-            </div>
+            <img 
+              src="/afroku-logo.png" 
+              alt="Afroku Logo" 
+              className="h-52 w-auto group-hover:scale-105 transition-transform"
+            />
           </Link>
 
           {/* Navigation Links */}
@@ -66,10 +60,10 @@ export function Navbar({ overlay = false }: NavbarProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="group relative py-2 text-white/90 hover:text-[#E85D04] transition-colors duration-300"
+                className="group relative py-2 text-white/90 hover:text-[#10B981] transition-colors duration-300"
               >
                 <span>{link.label}</span>
-                <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-[#E85D04] transition-all duration-300 group-hover:w-full rounded-full" />
+                <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-[#10B981] transition-all duration-300 group-hover:w-full rounded-full" />
               </Link>
             ))}
           </nav>
@@ -78,7 +72,7 @@ export function Navbar({ overlay = false }: NavbarProps) {
           <div className="hidden lg:flex items-center gap-4">
             <Link 
               href="/connexion" 
-              className="text-xs font-bold text-white border-white/30 hover:border-white px-4 py-2.5 rounded-full border transition-all hover:text-[#E85D04]"
+              className="text-xs font-bold text-white border-white/30 hover:border-white px-4 py-2.5 rounded-full border transition-all hover:text-[#10B981]"
             >
               Connexion
             </Link>
@@ -109,7 +103,7 @@ export function Navbar({ overlay = false }: NavbarProps) {
             <Link
               key={link.href}
               href={link.href}
-              className="block px-3 py-2 rounded-xl text-base font-bold text-gray-800 hover:text-[#E85D04] hover:bg-[#FFF7ED] transition-colors"
+              className="block px-3 py-2 rounded-xl text-base font-bold text-gray-800 hover:text-[#10B981] hover:bg-[#FFF7ED] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.label}

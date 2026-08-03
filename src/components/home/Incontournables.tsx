@@ -24,7 +24,7 @@ export function Incontournables() {
                 <span className="text-white text-xs font-bold">{INCONTOURNABLES[0].rating}</span>
               </div>
               <div className="relative z-10 p-7 space-y-3">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#E85D04] bg-[#E85D04]/15 border border-[#E85D04]/30 rounded-full px-3 py-1 inline-block">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#10B981] bg-[#10B981]/15 border border-[#10B981]/30 rounded-full px-3 py-1 inline-block">
                   Patrimoine Mondial & Lacustre
                 </span>
                 <h3 className="text-3xl sm:text-4xl font-black text-white drop-shadow-xl">{INCONTOURNABLES[0].name}</h3>
@@ -33,7 +33,7 @@ export function Incontournables() {
                 </p>
                 <Link
                   href="/explorer?dest=Ganvié"
-                  className="inline-flex px-5 py-2 bg-white/10 hover:bg-[#E85D04] border border-white/20 hover:border-[#E85D04] text-white text-xs font-extrabold rounded-xl transition-all backdrop-blur-md"
+                  className="inline-flex px-5 py-2 bg-white/10 hover:bg-[#10B981] border border-white/20 hover:border-[#10B981] text-white text-xs font-extrabold rounded-xl transition-all backdrop-blur-md"
                 >
                   Découvrir
                 </Link>
@@ -85,14 +85,25 @@ export function Incontournables() {
               Les Trésors du Patrimoine
             </span>
             <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
-              Incontournables <span className="text-[#E85D04] italic">du Bénin</span>
+              Incontournables <span className="text-[#10B981] italic">du Bénin</span>
             </h2>
-            <p className="text-white/55 text-sm leading-relaxed">
-              Des cités lacustres aux parcs nationaux et citadelles royales, découvrez les trésors du Bénin.
+            <p className="text-white/60 text-lg leading-relaxed space-y-4">
+              <span className="block">
+                Voyager au Bénin, c&apos;est vivre une <strong className="text-[#10B981]">épopée entre histoire et nature brute</strong>.
+              </span>
+              <span className="block">
+                Au Sud, parcourez les canaux de <strong className="text-white">Ganvié</strong>, la mythique <strong className="text-white">« Venise africaine »</strong>, avant de vous recueillir à <strong className="text-white">Ouidah</strong> sur la <strong className="text-[#10B981]">Route des Esclaves</strong>.
+              </span>
+              <span className="block">
+                Plus au Nord, remontez le temps au cœur des <strong className="text-white">Palais Royaux d&apos;Abomey</strong>, joyau classé à l&apos;<strong className="text-[#10B981]">UNESCO</strong> et mémoire de la puissante royauté dahoméenne.
+              </span>
+              <span className="block">
+                Enfin, émerveillez-vous devant la faune sauvage du <strong className="text-white">Parc de la Pendjari</strong>, sanctuaire d&apos;une <strong className="text-[#10B981]">biodiversité exceptionnelle</strong>. Une terre de légendes à explorer.
+              </span>
             </p>
             <Link
               href="/explorer"
-              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#E85D04] transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-[#10B981] transition-colors group"
             >
               <span>Voir toute la carte</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
