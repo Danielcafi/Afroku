@@ -30,23 +30,12 @@
   100% { background-position: 200% center; }
 }
 
-/* Landing page only: fixed dark green background with leaf images */
+/* Landing page only: dark green background with leaf images */
 .landing-bg {
-  background-color: #0F382C;
   color: #ffffff;
 }
 
-.landing-bg body {
-  background-image:
-    url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=1400&auto=format&fit=crop'),
-    url('/hero-fixed-bg.png');
-  background-attachment: fixed, fixed;
-  background-size: 50% auto, 50% 100%;
-  background-position: left center, right center;
-  background-repeat: no-repeat, no-repeat;
-  background-color: #0F382C;
-}
-
+/* Desktop overlay */
 .landing-bg body::before {
   content: '';
   position: fixed;
@@ -68,6 +57,7 @@
     );
 }
 
+/* Desktop blend overlay */
 .landing-bg body::after {
   content: '';
   position: fixed;
@@ -84,29 +74,20 @@
   filter: grayscale(100%) invert(1) contrast(2);
 }
 
-/* Mobile: full-bleed mask image with dark overlay */
+/* Mobile: dark mask overlay only (background image set via JS) */
 @media (max-width: 767px) {
-  .landing-bg body {
-    background-image: url('/hero-fixed-bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-color: #0F382C;
-  }
-
   .landing-bg body::before {
     background: linear-gradient(
       to bottom,
       rgba(15,56,44,0.70) 0%,
-      rgba(15,56,44,0.45) 30%,
-      rgba(15,56,44,0.45) 70%,
+      rgba(15,56,44,0.40) 35%,
+      rgba(15,56,44,0.40) 65%,
       rgba(15,56,44,0.75) 100%
-    );
+    ) !important;
   }
 
   .landing-bg body::after {
-    display: none;
+    display: none !important;
   }
 }
 
