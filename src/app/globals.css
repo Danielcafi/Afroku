@@ -84,6 +84,32 @@
   filter: grayscale(100%) invert(1) contrast(2);
 }
 
+/* Mobile: full-bleed mask image with dark overlay */
+@media (max-width: 767px) {
+  .landing-bg body {
+    background-image: url('/hero-fixed-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0F382C;
+  }
+
+  .landing-bg body::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(15,56,44,0.70) 0%,
+      rgba(15,56,44,0.45) 30%,
+      rgba(15,56,44,0.45) 70%,
+      rgba(15,56,44,0.75) 100%
+    );
+  }
+
+  .landing-bg body::after {
+    display: none;
+  }
+}
+
 .landing-bg #__next,
 .landing-bg .page-content {
   position: relative;

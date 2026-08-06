@@ -81,7 +81,7 @@ export function HeroSearch() {
   const indices = [wrap(current - 1), current, wrap(current + 1)];
 
   return (
-    <section className="relative z-10 pt-28 pb-20 px-4 overflow-hidden min-h-[680px] flex flex-col justify-center">
+    <section className="relative z-10 pt-20 pb-10 px-4 md:pt-28 md:pb-20 overflow-hidden min-h-[50vh] md:min-h-[680px] flex flex-col justify-center">
 
       <div className="relative z-10 max-w-7xl mx-auto space-y-14 w-full">
         
@@ -102,7 +102,7 @@ export function HeroSearch() {
             {/* Left Pill */}
             <div
               key={`left-${indices[0]}`}
-              className="md:col-span-1 relative h-[260px] md:h-[420px] rounded-[40px] overflow-hidden shadow-lg border-2 border-white/20 group cursor-pointer transition-all duration-700 ease-in-out"
+              className="hidden md:block md:col-span-1 relative h-[420px] rounded-[40px] overflow-hidden shadow-lg border-2 border-white/20 group cursor-pointer transition-all duration-700 ease-in-out"
               style={{ opacity: 1 }}
               onClick={() => goTo(wrap(current - 1))}
             >
@@ -126,7 +126,7 @@ export function HeroSearch() {
             {/* Center Pill */}
             <div
               key={`center-${indices[1]}`}
-              className="md:col-span-3 relative h-[380px] md:h-[520px] rounded-[50px] overflow-hidden shadow-2xl border-4 border-white/30 group"
+              className="col-span-1 md:col-span-3 relative h-[280px] sm:h-[340px] md:h-[520px] rounded-[30px] md:rounded-[50px] overflow-hidden shadow-2xl border-2 md:border-4 border-white/30 group"
             >
               {destinations.map((dest, i) => (
                 <img
@@ -140,19 +140,19 @@ export function HeroSearch() {
               ))}
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
-              <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-black text-[#0F382C] shadow-md flex items-center gap-2 transition-all duration-500">
+              <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-white/90 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-xs font-black text-[#0F382C] shadow-md flex items-center gap-2 transition-all duration-500">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
                 {destinations[indices[1]].badge}
               </div>
 
-              <div className="absolute bottom-8 left-8 right-8 text-white space-y-3">
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 text-white space-y-2 md:space-y-3">
                 <div className="space-y-1">
                   <span className="text-xs font-bold text-amber-300 uppercase tracking-widest block transition-all duration-500">{destinations[indices[1]].tag}</span>
                   <h3 className="text-2xl sm:text-4xl font-serif font-black transition-all duration-500">{destinations[indices[1]].title}</h3>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-white/20">
                   <p className="text-xs text-gray-200 max-w-md hidden sm:block transition-all duration-500">{destinations[indices[1]].subtitle}</p>
-                  <Link href={destinations[indices[1]].cta.href} className="px-6 py-3 bg-[#10B981] hover:bg-[#059669] text-white text-xs font-extrabold rounded-full shadow-lg transition-all flex items-center gap-2">
+                  <Link href={destinations[indices[1]].cta.href} className="px-5 py-2.5 md:px-6 md:py-3 bg-[#10B981] hover:bg-[#059669] text-white text-[10px] md:text-xs font-extrabold rounded-full shadow-lg transition-all flex items-center gap-2">
                     <span>{destinations[indices[1]].cta.label}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -163,7 +163,7 @@ export function HeroSearch() {
             {/* Right Pill */}
             <div
               key={`right-${indices[2]}`}
-              className="md:col-span-1 relative h-[260px] md:h-[420px] rounded-[40px] overflow-hidden shadow-lg border-2 border-white/20 group cursor-pointer transition-all duration-700 ease-in-out"
+              className="hidden md:block md:col-span-1 relative h-[420px] rounded-[40px] overflow-hidden shadow-lg border-2 border-white/20 group cursor-pointer transition-all duration-700 ease-in-out"
               onClick={() => goTo(wrap(current + 1))}
             >
               {destinations.map((dest, i) => (
@@ -185,11 +185,11 @@ export function HeroSearch() {
           </div>
 
           {/* Arrows */}
-          <button type="button" onClick={prev} aria-label="Précédent" className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md shadow-lg flex items-center justify-center text-white transition-all cursor-pointer hidden md:flex">
-            <ChevronLeft className="w-5 h-5" />
+          <button type="button" onClick={prev} aria-label="Précédent" className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md shadow-lg flex items-center justify-center text-white transition-all cursor-pointer">
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
           </button>
-          <button type="button" onClick={next} aria-label="Suivant" className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md shadow-lg flex items-center justify-center text-white transition-all cursor-pointer hidden md:flex">
-            <ChevronRight className="w-5 h-5" />
+          <button type="button" onClick={next} aria-label="Suivant" className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md shadow-lg flex items-center justify-center text-white transition-all cursor-pointer">
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
           </button>
 
           {/* Dots */}
@@ -210,23 +210,23 @@ export function HeroSearch() {
 
         {/* Search Bar */}
         <div
-          className="p-3 sm:p-4 rounded-full shadow-2xl max-w-3xl mx-auto"
+          className="p-2 sm:p-4 rounded-full shadow-2xl max-w-3xl mx-auto"
           style={{ backdropFilter: "blur(20px)", background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.18)" }}
         >
-          <form onSubmit={handleSearch} className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="flex items-center gap-3 px-4 w-full">
-              <MapPin className="w-5 h-5 text-[#10B981] shrink-0" />
+          <form onSubmit={handleSearch} className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 flex-1 min-w-0">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#10B981] shrink-0" />
               <input
                 type="text"
-                placeholder="Où souhaitez-vous aller au Bénin ? (Ganvié, Ouidah, Pendjari...)"
+                placeholder="Où souhaitez-vous aller au Bénin ?"
                 value={destination}
                 onChange={(e) => setDestination(e.target.value)}
-                className="w-full bg-transparent text-xs sm:text-sm font-semibold text-white focus:outline-none placeholder-white/40"
+                className="w-full bg-transparent text-xs sm:text-sm font-semibold text-white focus:outline-none placeholder-white/40 min-w-0"
               />
             </div>
-            <button type="submit" className="w-full sm:w-auto px-8 py-3 bg-[#10B981] hover:bg-[#059669] text-white text-xs font-extrabold rounded-full shadow-md transition-all shrink-0 cursor-pointer flex items-center justify-center gap-2">
-              <Search className="w-4 h-4" />
-              <span>Rechercher</span>
+            <button type="submit" className="shrink-0 w-11 h-11 sm:w-auto sm:h-auto sm:px-8 sm:py-3 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_28px_rgba(16,185,129,0.6)] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 bg-gradient-to-br from-[#10B981] to-[#059669] ring-2 ring-white/20 hover:ring-white/40">
+              <Search className="w-5 h-5 sm:w-4 sm:h-4 text-white drop-shadow-md" />
+              <span className="hidden sm:inline text-xs font-extrabold">Rechercher</span>
             </button>
           </form>
         </div>
