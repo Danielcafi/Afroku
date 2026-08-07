@@ -26,7 +26,7 @@ export function LandingBg({ children }: { children: React.ReactNode }) {
         body.style.backgroundSize = "cover";
         body.style.backgroundPosition = "center";
         body.style.backgroundRepeat = "no-repeat";
-        body.style.backgroundAttachment = "scroll";
+        body.style.backgroundAttachment = "fixed";
         body.style.backgroundColor = "#0F382C";
       } else {
         body.style.backgroundImage =
