@@ -160,7 +160,7 @@ export default function TouristDashboard() {
             <div className="p-4 bg-[#ECFDF5] rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=200&q=80" 
+                  src="/Ganvie.jpg" 
                   alt="Ganvié" 
                   className="w-20 h-20 rounded-xl object-cover"
                 />
@@ -191,7 +191,7 @@ export default function TouristDashboard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-3 bg-gray-50 rounded-xl border border-gray-200 flex items-center gap-3">
                 <img 
-                  src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=150&q=80" 
+                  src="/penjari.jpg" 
                   alt="Safari" 
                   className="w-14 h-14 rounded-lg object-cover"
                 />

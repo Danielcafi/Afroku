@@ -21,7 +21,7 @@ export function BeninExperienceSteps() {
       description: "Naviguez en pirogue à Ganvié (la Venise africaine) et observez éléphants et lions dans la Pendjari.",
       badge: "Nature & Aventure",
       accent: "from-emerald-400 to-teal-600",
-      image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=600&q=80"
+      image: "/Ganvie.jpg"
     },
     {
       num: "03",

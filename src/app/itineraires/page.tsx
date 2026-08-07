@@ -10,14 +10,14 @@ export default function ItinerairesPage() {
       cities: "Cotonou • Ouidah • Ganvié",
       duration: "3 Jours / 2 Nuits",
       price: "65 000 FCFA",
-      image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=600&q=80"
+      image: "/Ganvie.jpg"
     },
     {
       title: "Circuit 7 Jours : Grand Tour du Bénin",
       cities: "Cotonou • Abomey • Natitingou • Pendjari",
       duration: "7 Jours / 6 Nuits",
       price: "185 000 FCFA",
-      image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=600&q=80"
+      image: "/penjari.jpg"
     }
   ];
 

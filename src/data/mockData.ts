@@ -90,7 +90,7 @@ export const INCONTOURNABLES: Destination[] = [
     id: "ganvie",
     name: "Ganvié",
     location: "Lac Nokoué, Bénin",
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
+    image: "/Ganvie.jpg",
     startingPrice: 25000,
     rating: 4.9,
     reviewsCount: 324
@@ -108,7 +108,7 @@ export const INCONTOURNABLES: Destination[] = [
     id: "pendjari",
     name: "Parc Pendjari",
     location: "Atacora, Bénin",
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80",
+    image: "/penjari.jpg",
     startingPrice: 45000,
     rating: 4.9,
     reviewsCount: 189
@@ -160,9 +160,9 @@ export const EXPERIENCES: Experience[] = [
     reviewsCount: 124,
     price: 25000,
     badge: "Bestseller",
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+    image: "/Ganvie.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
+      "/Ganvie.jpg",
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
     ],
     description: "Surnommée la Venise africaine, la cité lacustre de Ganvié est unique au monde.",
@@ -359,7 +359,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Guide Certifié",
     publishedAt: "2 Juin 2026",
     readTime: 12,
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
+    image: "/penjari.jpg",
     tags: ["Pendjari", "Safari", "Faune", "Nature"]
   },
   {

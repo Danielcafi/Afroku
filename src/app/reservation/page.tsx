@@ -100,7 +100,7 @@ export default function ReservationPage() {
 
               <div className="flex gap-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=300&q=80" 
+                  src="/Ganvie.jpg" 
                   alt="Ganvié" 
                   className="w-20 h-20 rounded-xl object-cover shrink-0"
                 />

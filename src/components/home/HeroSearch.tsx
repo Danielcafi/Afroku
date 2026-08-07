@@ -26,7 +26,7 @@ const destinations: Destination[] = [
     cta: { label: "Voir les palais", href: "/explorer?dest=abomey" },
   },
   {
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=80",
+    image: "/penjari.jpg",
     badge: "Nature & Safari",
     tag: "Pendjari • Bénin",
     title: "Lions, Éléphants & Horizons",
@@ -35,7 +35,7 @@ const destinations: Destination[] = [
     cta: { label: "Partir en safari", href: "/explorer?dest=pendjari" },
   },
   {
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=80",
+    image: "/Ganvie.jpg",
     badge: "Culture Lacustre",
     tag: "Ganvié • Bénin",
     title: "Ville sur l'Eau",
